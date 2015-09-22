@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+# caso usar framework on root url "http://dominio/" deixar : RewriteRule ^(.+)$ /index.php/$1
+# caso usar framework em url personalizada "http://dominio/path" deixar : RewriteRule ^(.+)$ /path/index.php/$1
+
+RewriteRule ^(.+)$ /mvc/index.php/$1
